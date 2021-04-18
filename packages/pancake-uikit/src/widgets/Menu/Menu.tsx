@@ -124,10 +124,22 @@ const Menu: React.FC<NavProps> = ({
         />
         <Flex>
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
         </Flex>
       </StyledNav>
       <BodyWrapper>
+        <Panel
+          isPushed={isPushed}
+          isMobile={isMobile}
+          showMenu={showMenu}
+          isDark={isDark}
+          toggleTheme={toggleTheme}
+          langs={langs}
+          setLang={setLang}
+          currentLang={currentLang}
+          cakePriceUsd={cakePriceUsd}
+          pushNav={setIsPushed}
+          links={links}
+        />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
